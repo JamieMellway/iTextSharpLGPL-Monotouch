@@ -9,6 +9,7 @@ Changes to code:
 - Removed Barcode files
 - Removed an optimization in the ECFieldElement sqrt() function
 - Commented out line 623 in LinearGradientBrush in Mono's sysdrawing-coregraphics.
+- In Properties.Load, falling back to no specified encoding for StreamReader on exception
 
 Links
 =====

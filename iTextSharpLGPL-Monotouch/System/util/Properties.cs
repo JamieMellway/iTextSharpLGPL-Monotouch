@@ -2,6 +2,7 @@ using System;
 using System.Text;
 using System.IO;
 using System.Collections;
+using System.Diagnostics;
 
 namespace System.util
 {
@@ -71,7 +72,16 @@ namespace System.util
         }
 
         public void Load(Stream inStream) {
-            StreamReader inp = new StreamReader(inStream, Encoding.GetEncoding(1252));
+			StreamReader inp; 
+
+			try{
+				 inp = new StreamReader(inStream, Encoding.GetEncoding(1252));
+			}
+			catch 
+			{
+				inp = new StreamReader(inStream);
+			}
+
             while (true) {
                 // Get next line
                 String line = inp.ReadLine();

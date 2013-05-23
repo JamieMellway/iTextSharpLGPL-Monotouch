@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTextSharpLGPL-Monotouch", "iTextSharpLGPL-Monotouch\iTextSharpLGPL-Monotouch.csproj", "{452533C0-F85D-4C5A-A495-407CA733F832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTextSharpLGPL-Monotouch-Test", "iTextSharpLGPL-Monotouch-Test\iTextSharpLGPL-Monotouch-Test.csproj", "{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		AppStore|Any CPU = AppStore|Any CPU
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{452533C0-F85D-4C5A-A495-407CA733F832}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{452533C0-F85D-4C5A-A495-407CA733F832}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{452533C0-F85D-4C5A-A495-407CA733F832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{452533C0-F85D-4C5A-A495-407CA733F832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{452533C0-F85D-4C5A-A495-407CA733F832}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{452533C0-F85D-4C5A-A495-407CA733F832}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{452533C0-F85D-4C5A-A495-407CA733F832}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{452533C0-F85D-4C5A-A495-407CA733F832}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{452533C0-F85D-4C5A-A495-407CA733F832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{452533C0-F85D-4C5A-A495-407CA733F832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{452533C0-F85D-4C5A-A495-407CA733F832}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{452533C0-F85D-4C5A-A495-407CA733F832}.Release|iPhone.Build.0 = Release|Any CPU
+		{452533C0-F85D-4C5A-A495-407CA733F832}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{452533C0-F85D-4C5A-A495-407CA733F832}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}.AppStore|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}.AppStore|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}.Debug|iPhone.Build.0 = Debug|iPhone
+		{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
+		{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}.Release|iPhone.ActiveCfg = Release|iPhone
+		{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}.Release|iPhone.Build.0 = Release|iPhone
+		{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{56FB7B37-D5FE-47AA-9E98-C17B9DC815E9}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = iTextSharpLGPL-Monotouch-Test\iTextSharpLGPL-Monotouch-Test.csproj
+	EndGlobalSection
+EndGlobal

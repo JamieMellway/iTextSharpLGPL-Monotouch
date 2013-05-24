@@ -8,7 +8,7 @@ Changes to code:
 - Added setter to the Chunk Content
 - Removed Barcode files
 - Removed an optimization in the ECFieldElement sqrt() function
-- Commented out line 623 in LinearGradientBrush in Mono's sysdrawing-coregraphics.
+- Commented out line 623 in LinearGradientBrush (context.DrawShading(shading);) in Mono's sysdrawing-coregraphics to get it to compile.
 - In Properties.Load, falling back to no specified encoding for StreamReader on exception
 
 Links

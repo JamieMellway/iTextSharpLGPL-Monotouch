@@ -2,18 +2,18 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPad.6.1" />
   <MonoDevelop.Ide.Workbench ActiveDocument="iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch.txt">
     <Files>
-      <File FileName="iTextSharpLGPL-Monotouch-Test/CJKText.cs" Line="77" Column="6" />
       <File FileName="iTextSharpLGPL-Monotouch-Test/iTextSharp_TestViewController.cs" Line="1" Column="1" />
-      <File FileName="iTextSharpLGPL-Monotouch/System/util/Properties.cs" Line="85" Column="27" />
-      <File FileName="iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch.txt" Line="12" Column="90" />
+      <File FileName="iTextSharpLGPL-Monotouch/System/util/Properties.cs" Line="1" Column="1" />
+      <File FileName="iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch.txt" Line="9" Column="16" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
+        <State expanded="True">
           <Node name="iTextSharpLGPL-Monotouch" expanded="True">
             <Node name="System" expanded="True">
               <Node name="util" expanded="True" />
             </Node>
+            <Node name="iTextSharpLGPL-Monotouch.txt" selected="True" />
           </Node>
           <Node name="iTextSharpLGPL-Monotouch-Test" expanded="True" />
         </State>

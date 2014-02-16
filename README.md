@@ -34,6 +34,12 @@ http://itextpdf.com
 iTextSharp-Monotouch is a similar project that uses a dual AGPL/Commercial license version of iTextSharp
 https://github.com/mapo80/iTextSharp-Monotouch
 
+iTextSharpLGPL-MonoForAndroid is my sister project that does the same thing for MonoForAndroid
+https://github.com/JamieMellway/iTextSharpLGPL-MonoForAndroid
+
+iTextSharpSL-MPL is a similar project that does the same thing for Silverlight
+http://itextsharpsl.codeplex.com/
+
 Monotouch
 http://xamarin.com/monotouch
 

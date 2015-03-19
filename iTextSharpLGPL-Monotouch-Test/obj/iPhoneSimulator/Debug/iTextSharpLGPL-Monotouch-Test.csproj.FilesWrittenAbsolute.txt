@@ -1,9 +1,0 @@
-/Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch-Test/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
-/Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch-Test/obj/iPhoneSimulator/Debug/ibtool/iTextSharp_TestViewController.nib
-/Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch-Test/obj/iPhoneSimulator/Debug/
-/Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch-Test/bin/iPhoneSimulator/Debug/iTextSharpTest.exe.mdb
-/Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch-Test/bin/iPhoneSimulator/Debug/iTextSharpTest.exe
-/Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch-Test/obj/iPhoneSimulator/Debug/iTextSharpTest.exe
-/Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch-Test/obj/iPhoneSimulator/Debug/iTextSharpTest.exe.mdb
-/Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch-Test/bin/iPhoneSimulator/Debug/itextsharpios.dll
-/Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch-Test/bin/iPhoneSimulator/Debug/itextsharpios.dll.mdb

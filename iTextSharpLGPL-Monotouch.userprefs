@@ -1,29 +1,10 @@
-﻿<Properties GitUserInfo="UsingMD">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="iTextSharpLGPL-Monotouch\iTextSharpLGPL-Monotouch.txt">
+﻿<Properties GitUserInfo="UsingMD" StartupItem="iTextSharpLGPL-Monotouch-Test/iTextSharpLGPL-Monotouch-Test.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPad2.8.2" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="README.md">
     <Files>
-      <File FileName="iTextSharpLGPL-Monotouch-Test\iTextSharp_TestViewController.cs" Line="1" Column="1" />
-      <File FileName="iTextSharpLGPL-Monotouch\System\util\Properties.cs" Line="1" Column="1" />
-      <File FileName="iTextSharpLGPL-Monotouch\iTextSharpLGPL-Monotouch.txt" Line="14" Column="1" />
+      <File FileName="iTextSharpLGPL-Monotouch/README.txt" Line="1" Column="1" />
+      <File FileName="README.md" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="iTextSharpLGPL-Monotouch" expanded="True" selected="True" />
-          <Node name="iTextSharpLGPL-Monotouch-Test" expanded="True" />
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>isCJKFont</Value>
-          <Value>resourceSearch[0]</Value>
-          <Value>istr</Value>
-          <Value>isp</Value>
-          <Value>cjkFonts</Value>
-          <Value>ex</Value>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>

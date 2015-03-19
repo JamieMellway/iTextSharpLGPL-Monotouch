@@ -1,11 +1,10 @@
 iTextSharpLGPL-Monotouch
 ========================
 This project is taking the last version of the iTextSharp that was licenced with LGPL, putting it 
-in an iOS Library Project, adding a reference to monotouch, adding in a Mono System.Drawing.dll 
-from the Mono sysdrawing-coregraphics project, and making a few minor tweaks to get it working.
+in an iOS Library Project, and making the necessary tweaks to get it working.
 
 Update to iOS 64-bit:
-- Replaced system "sysdrawing-coregraphics" library with dummy classes
+- Replaced the "sysdrawing-coregraphics" library with dummy classes
 - Ran Xamarin's Migration wizard on the project
 - Made several fixes for conversions between int/float with nint/nfloat
 

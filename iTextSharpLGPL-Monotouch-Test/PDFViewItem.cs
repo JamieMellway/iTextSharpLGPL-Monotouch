@@ -1,6 +1,6 @@
 using System;
-using MonoTouch.QuickLook;
-using MonoTouch.Foundation;
+using QuickLook;
+using Foundation;
 using System.IO;
 
 namespace iTextSharpTest

@@ -1,12 +1,12 @@
 using System;
 using System.IO;
-using System.Drawing;
+using CoreGraphics;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-using MonoTouch.QuickLook;
+using QuickLook;
 
 namespace iTextSharpTest
 {

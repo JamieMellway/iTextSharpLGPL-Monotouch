@@ -1,0 +1,35 @@
+# Version: 8.8.0.2 (ccfcd59)
+# [first argument, ignore] # /Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch-Test/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.8.0.2/bin/mtouch-64 \
+	--cache \
+	/Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch-Test/obj/iPhoneSimulator/Debug/mtouch-cache \
+	--sim \
+	/Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch-Test/bin/iPhoneSimulator/Debug/iTextSharpTest.app \
+	--executable \
+	iTextSharpTest \
+	--debug \
+	--nolink \
+	--sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--sdk \
+	8.2 \
+	--targetver \
+	6.1 \
+	--abi=i386 \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.Linq.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
+	-r \
+	/Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch/bin/Debug//itextsharpios.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	-r \
+	/Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch/bin/Debug//itextsharpios.dll \
+	/Users/jdm/Documents/tfsapp01/Illumitask/Clients/Development/iOSx64Migration/iTextSharpLGPL-Monotouch/iTextSharpLGPL-Monotouch-Test/bin/iPhoneSimulator/Debug//iTextSharpTest.exe \

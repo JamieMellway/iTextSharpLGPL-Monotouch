@@ -1,6 +1,6 @@
 using System;
-using MonoTouch.QuickLook;
-using MonoTouch.Foundation;
+using QuickLook;
+using Foundation;
 using System.IO;
 
 namespace iTextSharpTest
@@ -14,12 +14,12 @@ namespace iTextSharpTest
 
 		private string fileName;
 
-		public override int PreviewItemCount(QLPreviewController controller)
+		public override nint PreviewItemCount(QLPreviewController controller)
 		{
 			return 1;
 		}
 
-		public override QLPreviewItem GetPreviewItem(QLPreviewController controller, int index)
+		public override IQLPreviewItem GetPreviewItem(QLPreviewController controller, nint index)
 		{
 			string documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.InternetCache);
 			NSUrl url = NSUrl.FromFilename (Path.Combine (documentsPath, fileName));

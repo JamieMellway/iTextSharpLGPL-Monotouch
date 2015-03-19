@@ -109,7 +109,7 @@ namespace iTextSharp.text.rtf.table {
         /**
         * The number of header rows in this RtfTable
         */
-        private int headerRows = 0;
+        private nint headerRows = 0;
         /**
         * The offset from the previous text
         */
@@ -305,7 +305,7 @@ namespace iTextSharp.text.rtf.table {
         * 
         * @return The number of header rows
         */
-        protected internal int GetHeaderRows() {
+        protected internal nint GetHeaderRows() {
             return this.headerRows;
         }
     }

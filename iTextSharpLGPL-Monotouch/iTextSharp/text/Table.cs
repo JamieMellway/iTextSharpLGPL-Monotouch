@@ -158,7 +158,7 @@ namespace iTextSharp.text {
         private int columns;
 
         // this is the current Position in the table
-        private System.Drawing.Point curPosition = new System.Drawing.Point(0, 0);
+        private CoreGraphics.CGPoint curPosition = new CoreGraphics.CGPoint(0, 0);
 
         ///<summary> This is the list of Rows. </summary>
         private ArrayList rows = new ArrayList();
@@ -169,7 +169,7 @@ namespace iTextSharp.text {
         private Cell defaultCell = new Cell(true);
 
         ///<summary> This is the number of the last row of the table headers. </summary>
-        private int lastHeaderRow = -1;
+        private nint lastHeaderRow = -1;
 
         ///<summary> This is the horizontal Element. </summary>
         private int alignment = Element.ALIGN_CENTER;
@@ -257,7 +257,7 @@ namespace iTextSharp.text {
             for (int i = 0; i < rows; i++) {
                 this.rows.Add(new Row(columns));
             }
-            curPosition = new System.Drawing.Point(0, 0);
+            curPosition = new CoreGraphics.CGPoint(0, 0);
 
             // the DEFAULT widths are calculated
             widths = new float[columns];
@@ -415,7 +415,7 @@ namespace iTextSharp.text {
         /// <param name="row">The row where the Cell will be added</param>
         /// <param name="column">The column where the Cell will be added</param>
         public void AddCell(Cell aCell, int row, int column) {
-            AddCell(aCell, new System.Drawing.Point(row,column));
+            AddCell(aCell, new CoreGraphics.CGPoint(row,column));
         }
 
         /// <summary>
@@ -424,12 +424,12 @@ namespace iTextSharp.text {
         /// <param name="aCell">The Cell to add</param>
         /// <param name="aLocation">The location where the Cell will be added</param>
         public void AddCell(Cell aCell, object aLocation) {
-            System.Drawing.Point p;
+            CoreGraphics.CGPoint p;
             if (aCell == null) throw new Exception("addCell - cell has null-value");
             if (aLocation == null)
                 throw new Exception("addCell - point has null-value");
             else
-                p = (System.Drawing.Point)aLocation;
+                p = (CoreGraphics.CGPoint)aLocation;
 
             if (aCell.IsTable()) {
                 IEnumerator i = aCell.Elements.GetEnumerator();
@@ -476,7 +476,7 @@ namespace iTextSharp.text {
         /// </summary>
         /// <param name="content">a Phrase</param>
         /// <param name="location">a System.Drawing.Point</param>
-        public void AddCell(Phrase content, System.Drawing.Point location) {
+        public void AddCell(Phrase content, CoreGraphics.CGPoint location) {
             Cell cell = new Cell(content);
             cell.Border = defaultCell.Border;
             cell.BorderWidth = defaultCell.BorderWidth;
@@ -510,7 +510,7 @@ namespace iTextSharp.text {
         /// </remarks>
         /// <param name="content">a string</param>
         /// <param name="location">a point</param>
-        public void AddCell(string content, System.Drawing.Point location) {
+        public void AddCell(string content, CoreGraphics.CGPoint location) {
             AddCell(new Phrase(content), location);
         }
 
@@ -533,7 +533,7 @@ namespace iTextSharp.text {
         /// <param name="column">The column where the Cell will be added</param>
         public void InsertTable(Table aTable, int row, int column) {
             if (aTable == null) throw new Exception("insertTable - table has null-value");
-            InsertTable(aTable, new System.Drawing.Point(row, column));
+            InsertTable(aTable, new CoreGraphics.CGPoint(row, column));
         }
 
         /// <summary>
@@ -542,14 +542,14 @@ namespace iTextSharp.text {
         /// </summary>
         /// <param name="aTable">the table you want to insert</param>
         /// <param name="aLocation">a System.Drawing.Point</param>
-        public void InsertTable(Table aTable, System.Drawing.Point p) {
+        public void InsertTable(Table aTable, CoreGraphics.CGPoint p) {
             if (aTable == null) throw new Exception("insertTable - table has null-value");
 
             mTableInserted = true;
             aTable.Complete();
             if (p.Y > columns) 
                 throw new ArgumentException("insertTable -- wrong columnposition("+ p.Y + ") of location; max =" + columns);
-            int rowCount = p.X + 1 - rows.Count;
+			nint rowCount = (nint)p.X + 1 - rows.Count;
             int i = 0;
             if ( rowCount > 0 ) {   //create new rows ?
                 for (; i < rowCount; i++) {
@@ -557,7 +557,7 @@ namespace iTextSharp.text {
                 }
             }
 
-            ((Row) rows[p.X]).SetElement(aTable,p.Y);
+			((Row) rows[(int)p.X]).SetElement(aTable,(nint)p.Y);
 
             CurrentLocationToNextValidPosition = p;
         }
@@ -766,9 +766,9 @@ namespace iTextSharp.text {
         /// Marks the last row of the table headers.
         /// </summary>
         /// <returns>the number of the last row of the table headers</returns>
-        public int EndHeaders() {
+        public nint EndHeaders() {
             /* patch sep 8 2001 Francesco De Milato */
-            lastHeaderRow = curPosition.X - 1;
+			lastHeaderRow = (nint)curPosition.X - 1;
             return lastHeaderRow;
         }
 
@@ -778,7 +778,7 @@ namespace iTextSharp.text {
         /// Sets the horizontal Element.
         /// </summary>
         /// <value>the new value</value>
-        public int LastHeaderRow {
+        public nint LastHeaderRow {
             set {
                 lastHeaderRow = value;
             }
@@ -1173,7 +1173,7 @@ namespace iTextSharp.text {
                                 ((Cell) aElement).Colspan = ((Cell) ((Row) rows[i]).GetCell(j)).Colspan + lDummyWidths[j] - 1;
                                 
                                 // most likely this cell covers a larger area because of the row/cols splits : define not-to-be-filled cells
-                                PlaceCell(newRows,((Cell) aElement), new System.Drawing.Point(lDummyRow,lDummyColumn));
+                                PlaceCell(newRows,((Cell) aElement), new CoreGraphics.CGPoint(lDummyRow,lDummyColumn));
                             }
                         }
                         lDummyColumn += lDummyWidths[j];
@@ -1195,7 +1195,7 @@ namespace iTextSharp.text {
             for (int i=0; i < rows.Count; i++) {
                 for (int j=0; j < columns; j++) {
                     if ( ((Row) rows[i]).IsReserved(j) == false) {
-                        AddCell(defaultCell, new System.Drawing.Point(i, j));
+                        AddCell(defaultCell, new CoreGraphics.CGPoint(i, j));
                     }
                 }
             }
@@ -1211,18 +1211,18 @@ namespace iTextSharp.text {
         /// <param name="aCell">the cell that has to be checked</param>
         /// <param name="aLocation">the location where the cell has to be placed</param>
         /// <returns></returns>
-        private bool IsValidLocation(Cell aCell, System.Drawing.Point aLocation) {
+        private bool IsValidLocation(Cell aCell, CoreGraphics.CGPoint aLocation) {
             // rowspan not beyond last column
             if ( aLocation.X < rows.Count ) {        // if false : new location is already at new, not-yet-created area so no check
                 if ((aLocation.Y + aCell.Colspan) > columns) {
                     return false;
                 }
 
-                int difx = ((rows.Count - aLocation.X) >  aCell.Rowspan) ? aCell.Rowspan : rows.Count - aLocation.X;
-                int dify = ((columns - aLocation.Y) >  aCell.Colspan) ? aCell.Colspan : columns - aLocation.Y;
+				nint difx = ((rows.Count - aLocation.X) >  aCell.Rowspan) ? aCell.Rowspan : rows.Count - (nint)aLocation.X;
+				nint dify = ((columns - aLocation.Y) >  aCell.Colspan) ? aCell.Colspan : columns - (nint)aLocation.Y;
                 // no other content at cells targetted by rowspan/colspan
-                for (int i=aLocation.X; i < (aLocation.X + difx); i++) {
-                    for (int j=aLocation.Y; j < (aLocation.Y + dify); j++) {
+				for (int i=(int)aLocation.X; i < (aLocation.X + difx); i++) {
+					for (int j=(int)aLocation.Y; j < (aLocation.Y + dify); j++) {
                         if ( ((Row) rows[i]).IsReserved(j) == true ) {
                             return false;
                         }
@@ -1244,10 +1244,10 @@ namespace iTextSharp.text {
         /// <param name="someRows">some rows</param>
         /// <param name="aCell">the cell that has to be inserted</param>
         /// <param name="aPosition">the position where the cell has to be placed</param>
-        private void PlaceCell(ArrayList someRows, Cell aCell, System.Drawing.Point aPosition) {
+        private void PlaceCell(ArrayList someRows, Cell aCell, CoreGraphics.CGPoint aPosition) {
             int i;
             Row row = null;
-            int rowCount = aPosition.X + aCell.Rowspan - someRows.Count;
+			nint rowCount = (nint)aPosition.X + aCell.Rowspan - someRows.Count;
             AssumeTableDefaults(aCell);
             if ( (aPosition.X + aCell.Rowspan) > someRows.Count ) {        //create new rows ?
                 for (i = 0; i < rowCount; i++) {
@@ -1257,15 +1257,15 @@ namespace iTextSharp.text {
             }
 
             // reserve cell in rows below
-            for (i = aPosition.X + 1; i < (aPosition.X  + aCell.Rowspan); i++) {
-                if ( !((Row) someRows[i]).Reserve(aPosition.Y, aCell.Colspan)) {
+			for (i = (int)aPosition.X + 1; i < (aPosition.X  + aCell.Rowspan); i++) {
+				if ( !((Row) someRows[i]).Reserve((int)aPosition.Y, aCell.Colspan)) {
 
                     // should be impossible to come here :-)
                     throw new Exception("addCell - error in reserve");
                 }
             }
-            row = (Row) someRows[aPosition.X];
-            row.AddElement(aCell, aPosition.Y);
+			row = (Row) someRows[(int)aPosition.X];
+			row.AddElement(aCell, (int)aPosition.Y);
 
         }
 
@@ -1351,12 +1351,12 @@ namespace iTextSharp.text {
         /// Sets current col/row to Valid(empty) pos after addCell/Table
         /// </summary>
         /// <value>a System.Drawing.Point</value>
-        private System.Drawing.Point CurrentLocationToNextValidPosition {
+        private CoreGraphics.CGPoint CurrentLocationToNextValidPosition {
             set {
                 // set latest location to next valid position
-                int i, j;
-                i = value.X;
-                j = value.Y;
+                nint i, j;
+				i = (nint)value.X;
+				j = (nint)value.Y;
                 do {
                     if ( (j + 1)  == columns ) {    // goto next row
                         i++;
@@ -1367,9 +1367,9 @@ namespace iTextSharp.text {
                     }
                 }
                 while (
-                    (i < rows.Count) && (j < columns) && (((Row) rows[i]).IsReserved(j) == true)
+					(i < rows.Count) && (j < columns) && (((Row) rows[(int)i]).IsReserved((int)j) == true)
                     );
-                curPosition = new System.Drawing.Point(i, j);
+                curPosition = new CoreGraphics.CGPoint(i, j);
             }
         }
 
@@ -1384,7 +1384,7 @@ namespace iTextSharp.text {
         */
         public int NextRow {
             get {
-                return curPosition.X;
+				return (int)curPosition.X;
             }
         }
         
@@ -1395,7 +1395,7 @@ namespace iTextSharp.text {
         */
         public int NextColumn {
             get {
-                return curPosition.Y;
+				return (int)curPosition.Y;
             }
         }
         
@@ -1478,7 +1478,7 @@ namespace iTextSharp.text {
             t_evt.CloneNonPositionParameters(this);
             t_evt.Cellspacing = cellspacing;
             pdfptable.TableEvent = t_evt;
-            pdfptable.HeaderRows = lastHeaderRow + 1;
+			pdfptable.HeaderRows = (int)lastHeaderRow + 1;
             pdfptable.SplitLate = cellsFitPage;
             pdfptable.KeepTogether = tableFitsPage;
             if (!float.IsNaN(offset)) {

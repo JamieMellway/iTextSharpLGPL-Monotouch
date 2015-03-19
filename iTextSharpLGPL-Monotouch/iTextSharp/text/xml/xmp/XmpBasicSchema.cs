@@ -66,7 +66,7 @@ namespace iTextSharp.text.xml.xmp {
         public const String BASEURL = "xmp:BaseURL";
         /** The date and time the resource was originally created. */
         public const String CREATEDATE = "xmp:CreateDate";
-        /** The name of the first known tool used to create the resource. If history is present in the metadata, this value should be equivalent to that of xmpMM:History’s softwareAgent property. */
+        /** The name of the first known tool used to create the resource. If history is present in the metadata, this value should be equivalent to that of xmpMM:Historyï¿½s softwareAgent property. */
         public const String CREATORTOOL = "xmp:CreatorTool";
         /** An unordered array of text strings that unambiguously identify the resource within a given context. */
         public const String IDENTIFIER = "xmp:Identifier";

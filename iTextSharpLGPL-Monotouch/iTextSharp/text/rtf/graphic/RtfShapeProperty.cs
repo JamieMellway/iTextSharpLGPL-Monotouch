@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using System.Drawing;
+using CoreGraphics;
 using iTextSharp.text;
 using iTextSharp.text.rtf;
 /**
@@ -253,7 +253,7 @@ namespace iTextSharp.text.rtf.graphic {
         * @param name The property name to use.
         * @param value The Point array to use.
         */
-        public RtfShapeProperty(String name, Point[] value) {
+        public RtfShapeProperty(String name, CGPoint[] value) {
             this.name = name;
             this.value = value;
             this.type = PROPERTY_TYPE_ARRAY;
@@ -323,8 +323,8 @@ namespace iTextSharp.text.rtf.graphic {
                             result.Write(RtfElement.COMMA_DELIMITER, 0, RtfElement.COMMA_DELIMITER.Length);
                         }
                     }
-                } else if (this.value is Point[]) {
-                    Point[] values = (Point[]) this.value;
+                } else if (this.value is CGPoint[]) {
+                    CGPoint[] values = (CGPoint[]) this.value;
                     result.Write(t = DocWriter.GetISOBytes("8;"), 0, t.Length);
                     result.Write(t = IntToByteArray(values.Length), 0, t.Length);
                     result.Write(RtfElement.COMMA_DELIMITER, 0, RtfElement.COMMA_DELIMITER.Length);

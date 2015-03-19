@@ -238,7 +238,7 @@ namespace iTextSharp.text {
         /// </summary>
         /// <param name="aElement">the cell to add.</param>
         /// <param name="column">the position where to add the cell.</param>
-        internal void SetElement(Object aElement, int column) {
+        internal void SetElement(Object aElement, nint column) {
             if (reserved[column]) throw new ArgumentException("setElement - position already taken");
         
             cells[column] = aElement;

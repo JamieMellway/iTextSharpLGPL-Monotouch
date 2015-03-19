@@ -588,9 +588,9 @@ namespace iTextSharp.text.pdf
             }
         }
         
-        /** Sets the maximum length of the field’s text, in characters.
+        /** Sets the maximum length of the fieldï¿½s text, in characters.
         * It is only meaningful for text fields.
-        * @param maxCharacterLength the maximum length of the field’s text, in characters
+        * @param maxCharacterLength the maximum length of the fieldï¿½s text, in characters
         */
         public int MaxCharacterLength {
             set {

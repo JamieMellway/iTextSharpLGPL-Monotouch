@@ -236,7 +236,7 @@ namespace iTextSharp.text.pdf.codec.wmf
                 case META_MOVETO:
                 {
                     int y = meta.ReadShort();
-                    System.Drawing.Point p = new System.Drawing.Point(meta.ReadShort(), y);
+                    CoreGraphics.CGPoint p = new CoreGraphics.CGPoint(meta.ReadShort(), y);
                     state.CurrentPoint = p;
                     break;
                 }
@@ -244,11 +244,11 @@ namespace iTextSharp.text.pdf.codec.wmf
                 {
                     int y = meta.ReadShort();
                     int x = meta.ReadShort();
-                    System.Drawing.Point p = state.CurrentPoint;
+                    CoreGraphics.CGPoint p = state.CurrentPoint;
                     cb.MoveTo(state.TransformX(p.X), state.TransformY(p.Y));
                     cb.LineTo(state.TransformX(x), state.TransformY(y));
                     cb.Stroke();
-                    state.CurrentPoint = new System.Drawing.Point(x, y);
+                    state.CurrentPoint = new CoreGraphics.CGPoint(x, y);
                     break;
                 }
                 case META_POLYLINE:

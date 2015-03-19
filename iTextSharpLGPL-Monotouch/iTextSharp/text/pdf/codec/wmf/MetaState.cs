@@ -72,7 +72,7 @@ namespace iTextSharp.text.pdf.codec.wmf {
 
         public Stack savedStates;
         public ArrayList MetaObjects;
-        public System.Drawing.Point currentPoint;
+        public CoreGraphics.CGPoint currentPoint;
         public MetaPen currentPen;
         public MetaBrush currentBrush;
         public MetaFont currentFont;
@@ -94,7 +94,7 @@ namespace iTextSharp.text.pdf.codec.wmf {
         public MetaState() {
             savedStates = new Stack();
             MetaObjects = new ArrayList();
-            currentPoint = new System.Drawing.Point(0, 0);
+            currentPoint = new CoreGraphics.CGPoint(0, 0);
             currentPen = new MetaPen();
             currentBrush = new MetaBrush();
             currentFont = new MetaFont();
@@ -228,6 +228,16 @@ namespace iTextSharp.text.pdf.codec.wmf {
         public float TransformY(int y) {
             return (1f - ((float)y - offsetWy) / extentWy) * scalingY;
         }
+
+		public nfloat TransformX (nfloat x)
+		{
+			return (nfloat)TransformX ((int)x);
+		}
+
+		public nfloat TransformY ( nfloat y)
+		{
+			return (nfloat)TransformY ((int)y);
+		}
     
         public float ScalingX {
             set {
@@ -270,7 +280,7 @@ namespace iTextSharp.text.pdf.codec.wmf {
             return (float)(scalingX < 0 ? Math.PI - ta : ta);
         }
         
-        public System.Drawing.Point CurrentPoint {
+        public CoreGraphics.CGPoint CurrentPoint {
             get {
                 return currentPoint;
             }

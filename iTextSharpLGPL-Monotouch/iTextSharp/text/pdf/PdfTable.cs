@@ -136,7 +136,7 @@ namespace iTextSharp.text.pdf {
             int rowNumber = 0;
             int groupNumber = 0;
             bool groupChange;
-            int firstDataRow = table.LastHeaderRow + 1;
+            nint firstDataRow = table.LastHeaderRow + 1;
             Cell cell;
             PdfCell currentCell;
             ArrayList newCells = new ArrayList();

@@ -120,9 +120,20 @@ namespace iTextSharp.text.rtf {
         * @param i The integer to convert
         * @return A byte array representing the integer
         */
-        public byte[] IntToByteArray(int i) {
+        public byte[] IntToByteArray(nint i) {
             return DocWriter.GetISOBytes(i.ToString());
         }
+
+		/**
+        * Transforms a float into its String representation and then returns the bytes
+        * of that string.
+        *
+        * @param i The float to convert
+        * @return A byte array representing the integer
+        */
+		public byte[] IntToByteArray(nfloat i) {
+			return DocWriter.GetISOBytes(((nfloat)i).ToString());
+		}
 
         /**
         *  RtfAddableElement subclasses are never assumed to be empty.

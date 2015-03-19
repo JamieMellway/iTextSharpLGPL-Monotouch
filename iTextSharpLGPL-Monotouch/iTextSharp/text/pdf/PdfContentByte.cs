@@ -709,7 +709,19 @@ namespace iTextSharp.text.pdf {
         public void MoveTo(float x, float y) {
             content.Append(x).Append(' ').Append(y).Append(" m").Append_i(separator);
         }
-    
+ 
+		/**
+         * Move the current point <I>(x, y)</I>, omitting any connecting line segment.
+         *
+         * @param       x               new x-coordinate
+         * @param       y               new y-coordinate
+         */
+
+		public void MoveTo (nfloat X, nfloat Y)
+		{
+			MoveTo ((float)X, (float)Y);
+		}
+
         /**
          * Appends a straight line segment from the current point <I>(x, y)</I>. The new current
          * point is <I>(x, y)</I>.
@@ -721,9 +733,22 @@ namespace iTextSharp.text.pdf {
         public void LineTo(float x, float y) {
             content.Append(x).Append(' ').Append(y).Append(" l").Append_i(separator);
         }
+
+		/**
+         * Appends a straight line segment from the current point <I>(x, y)</I>. The new current
+         * point is <I>(x, y)</I>.
+         *
+         * @param       x               new x-coordinate
+         * @param       y               new y-coordinate
+         */
+
+		public void LineTo (nfloat X, nfloat Y)
+		{
+			LineTo ((float)X, (float)Y);
+		}
     
         /**
-         * Appends a Bêzier curve to the path, starting from the current point.
+         * Appends a Bï¿½zier curve to the path, starting from the current point.
          *
          * @param       x1      x-coordinate of the first control point
          * @param       y1      y-coordinate of the first control point
@@ -738,7 +763,7 @@ namespace iTextSharp.text.pdf {
         }
     
         /**
-         * Appends a Bêzier curve to the path, starting from the current point.
+         * Appends a Bï¿½zier curve to the path, starting from the current point.
          *
          * @param       x2      x-coordinate of the second control point
          * @param       y2      y-coordinate of the second control point
@@ -751,7 +776,7 @@ namespace iTextSharp.text.pdf {
         }
     
         /**
-         * Appends a Bêzier curve to the path, starting from the current point.
+         * Appends a Bï¿½zier curve to the path, starting from the current point.
          *
          * @param       x1      x-coordinate of the first control point
          * @param       y1      y-coordinate of the first control point

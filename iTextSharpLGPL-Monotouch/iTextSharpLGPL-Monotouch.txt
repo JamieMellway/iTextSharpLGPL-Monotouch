@@ -4,6 +4,11 @@ This project is taking the last version of the iTextSharp that was licenced with
 in an iOS Library Project, adding a reference to monotouch, adding in a Mono System.Drawing.dll 
 from the Mono sysdrawing-coregraphics project, and making a few minor tweaks to get it working.
 
+Update to iOS 64-bit:
+- Replaced system "sysdrawing-coregraphics" library with dummy classes
+- Ran Xamarin's Migration wizard on the project
+- Made several fixes for conversions between int/float with nint/nfloat
+
 Changes to code:
 - Added setter to the Chunk Content.  (This was a custom need.) 
 - Removed Barcode files.  (iTextSharp-Monotouch did this and I didn't need it, so I removed it just in case.)

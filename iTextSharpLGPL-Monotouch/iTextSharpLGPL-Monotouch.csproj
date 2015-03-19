@@ -3,15 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{452533C0-F85D-4C5A-A495-407CA733F832}</ProjectGuid>
-    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>itextsharpios</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>itextsharpios</AssemblyName>
     <SignAssembly>false</SignAssembly>
+    <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,16 +35,13 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="monotouch" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing">
-      <HintPath>..\Lib\System.Drawing.dll</HintPath>
-    </Reference>
+    <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="SystemDrawingDummy\" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -4151,6 +4148,11 @@
     <Compile Include="System\util\zlib\ZStream.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SystemDrawingDummy\Bitmap.cs" />
+    <Compile Include="SystemDrawingDummy\Image.cs" />
+    <Compile Include="SystemDrawingDummy\ImageFormat.cs" />
+    <Compile Include="SystemDrawingDummy\Matrix.cs" />
+    <Compile Include="SystemDrawingDummy\Color.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="iTextSharp\text\pdf\fonts\Courier-Bold.afm">
@@ -4203,4 +4205,5 @@
     <None Include="iTextSharpLGPL-Monotouch.txt" />
     <None Include="README.txt" />
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
